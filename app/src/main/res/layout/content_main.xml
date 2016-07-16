@@ -14,11 +14,17 @@
 
     <TextView
         style="@style/HeaderTitle"
-        android:text="Trạng thái kết nối" />
+        android:text="Trạng thái kết nối"
+        android:id="@+id/textView" />
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayout"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:stretchColumns="0,1">
         <TableRow>
             <TextView android:text="Wifi"/>
             <TextView android:text="Chưa kết nối"
@@ -39,5 +45,15 @@
         android:layout_height="wrap_content"
         android:id="@+id/scan_bt"
         android:text="Tìm kiếm"
-        android:enabled="false"/>
+        android:enabled="false"
+        android:layout_below="@+id/tableLayout"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        style="@style/HeaderTitle"
+        android:text="Chức Năng"
+        android:layout_below="@+id/scan_bt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="31dp" />
 </RelativeLayout>
